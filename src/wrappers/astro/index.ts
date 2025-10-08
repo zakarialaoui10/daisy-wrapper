@@ -1,3 +1,3 @@
+export * from './actions/index.ts'
 export * from './data-display/index.ts'
-export {default as Button} from './actions/Button.astro'
-export {default as Link } from './navigation/Link.astro'
+export * from './navigation/index.ts'
