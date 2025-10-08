@@ -1,0 +1,31 @@
+{
+  "name": "daisy-wrapper",
+  "version": "0.0.0",
+  "description": "A cross-framework wrapper library for DaisyUI components",
+  "keywords": [
+    "daisyui",
+    "zikojs",
+    "wrapper"
+  ],
+  "homepage": "https://github.com/zakarialaoui10/daisy-wrapper#readme",
+  "bugs": {
+    "url": "https://github.com/zakarialaoui10/daisy-wrapper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakarialaoui10/daisy-wrapper.git"
+  },
+  "license": "MIT",
+  "author": "zakaria elalaoui",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exports": {
+    "./*": "./src/wrappers/*/index.ts"
+  },
+  "dependencies": {
+    "ziko": "^0.46.1"
+  }
+}

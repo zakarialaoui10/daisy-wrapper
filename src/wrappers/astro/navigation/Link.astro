@@ -1,0 +1,33 @@
+---
+export interface Props {
+  variant: 'outline' | 'dash' | 'soft' | 'ghost' | 'link';
+  color: 'neutral' | 'primary' | 'secondary' | 'accent' | 'info' | 'success' | 'warning' | 'error';
+  size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '';
+  active?: boolean;
+  disabled?: boolean;
+}
+
+const {
+//   variant = 'outline',
+  color = 'neutral',
+//   size = '',
+//   active = false,
+//   disabled = false
+} = Astro.props;
+
+// Build Tailwind classes based on props
+const classes = [
+  'link',
+  color ? `btn-${color}` : '',
+].filter(Boolean).join(' ');
+---
+
+<a class={classes} href="#">
+  <slot />
+</a>
+
+<!-- <button class="btn btn-xl">Xlarge</button>
+
+<button class="btn btn-soft btn-primary">Primary</button> -->
+
+
