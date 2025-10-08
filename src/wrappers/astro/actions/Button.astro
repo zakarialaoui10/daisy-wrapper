@@ -1,5 +1,6 @@
 ---
 import type { Variant, Color, Size } from '../../../shared/types.ts'
+import { generate_classes } from '../../../shared/utils'
 export interface Props {
   variant: Variant;
   color: Color;
@@ -7,7 +8,6 @@ export interface Props {
   active?: boolean;
   disabled?: boolean;
 }
-
 const {
   variant = 'outline',
   color = 'neutral',
@@ -15,24 +15,8 @@ const {
   active = false,
   disabled = false
 } = Astro.props;
-
-// Build Tailwind classes based on props
-const classes = [
-  'btn',
-  color ? `btn-${color}` : '',
-  variant ? `btn-${variant}` : '',
-  size ? `btn-${size}` : '',
-  active ? 'btn-active' : '',
-  disabled ? 'btn-disabled' : ''
-].filter(Boolean).join(' ');
 ---
-
-<button class={classes}>
+<button class={generate_classes('btn', color, variant, size, active, disabled)}>
   <slot />
 </button>
-
-<!-- <button class="btn btn-xl">Xlarge</button>
-
-<button class="btn btn-soft btn-primary">Primary</button> -->
-
 
