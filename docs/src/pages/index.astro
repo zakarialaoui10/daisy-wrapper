@@ -1,11 +1,31 @@
 ---
 import "../assets/app.css";
-import {Button} from "daisy-wrapper/astro/actions"
-console.log(Button)
+import {Button, Fab, Swap, SwapOff, SwapOn} from "daisy-wrapper/astro/actions"
+// console.log(Button)
 ---
 <Button color="primary">
-    JJJ
+    Button primary
 </Button>
-Hello World
+<br/>
 
-<!-- <button class="btn btn-primary">Button</button> -->
+<Fab>
+      <!-- buttons that show up when FAB is open -->
+<Button color="primary">Primary</Button>
+<Button color="secondary">Secondary</Button>
+</Fab>
+
+<Swap>
+    <SwapOn>
+        On
+        <!-- <Button color="primary"> On </Button> -->
+    </SwapOn>
+    <SwapOff>
+        Off
+        <!-- <Button color="primary"> Off </Button> -->
+    </SwapOff>
+</Swap>
+
+
+
+<button class="btn btn-primary">Button</button>
+

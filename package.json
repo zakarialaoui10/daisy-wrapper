@@ -1,6 +1,6 @@
 {
   "name": "daisy-wrapper",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A cross-framework wrapper library for DaisyUI components",
   "keywords": [
     "daisyui",
