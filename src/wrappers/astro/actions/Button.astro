@@ -2,19 +2,19 @@
 import type { Variant, Color, Size } from '../../../shared/types.ts'
 import { generate_classes } from '../../../shared/utils'
 export interface Props {
-  variant: Variant;
-  color: Color;
-  size: Size;
+  variant?: Variant;
+  color?: Color;
+  size?: Size;
   active?: boolean;
   disabled?: boolean;
 }
 const {
   variant = 'outline',
   color = 'neutral',
-  size = '',
+  size,
   active = false,
   disabled = false
-} = Astro.props;
+} = Astro.props as Props;
 ---
 <button class={generate_classes('btn', color, variant, size, active, disabled)}>
   <slot />

@@ -26,6 +26,9 @@
     "./*": "./src/wrappers/*/index.ts"
   },
   "dependencies": {
-    "ziko": "^0.46.1"
+    "@tailwindcss/vite": "^4.1.18",
+    "daisyui": "^5.5.14",
+    "tailwindcss": "^4.1.18",
+    "ziko": "^0.57.1"
   }
 }
